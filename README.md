@@ -1,6 +1,6 @@
 # Tiny-Obstacle-Discovery-ROS
 
-Created by Yicong Chang, Yankai Wang, Fei Sheng, and Feng Xue from BUPT
+Created by *Yicong Chang*, *Yankai Wang*, *Fei Sheng*, and *Feng Xue* from BUPT
 
 Official Python/ROS Implementation for "A Novel Multi-layer Framework for Tiny Obstacle Discovery", ICRA 2019
 
@@ -10,8 +10,8 @@ This repository contains the official Python/ROS implementation for "A Novel Mul
 
 **Note:** This version has been slightly different from the Matlab Version, mainly including the following points:
 
- - The feature, namely mode of edge pixels, is slightly simplified to accelerate the algorithm.
- - For higher efficiency, many modules in this system is implemented in C++.
+ - The feature, namely, mode of edge pixels, is slightly simplified to accelerate the algorithm.
+ - For higher efficiency, many modules in this system are implemented in C++.
  - The modules in the system are largely accelerated, although there is still a lot of room for improvement.
  - The performance of this implementation is slightly lower than that of the Matlab implementation
 
@@ -122,8 +122,6 @@ For visualization, you needs to add performance files into the `ros_names` list 
 cd ./TOD_ros/src/tod/scripts/
 python3 draw_result.py
 ```
-The performances are presented as follows:
-![performance](./performance.png)
 
 ## Training
 If you want to train your own model, run the following code.
