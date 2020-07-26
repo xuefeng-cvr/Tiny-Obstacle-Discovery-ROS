@@ -1,0 +1,8 @@
+prefix=/home/robotxf/TOD_python/TOD_ros/install
+
+Name: tod
+Description: Description of tod
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

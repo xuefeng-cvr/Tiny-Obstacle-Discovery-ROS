@@ -4,6 +4,7 @@ Created by *Yicong Chang*, *Yankai Wang*, *Fei Sheng*, and *Feng Xue* from BUPT
 
 Official Python/ROS Implementation for "A Novel Multi-layer Framework for Tiny Obstacle Discovery", ICRA 2019
 
+
 ## Introduction
 
 This repository contains the official Python/ROS implementation for "A Novel Multi-layer Framework for Tiny Obstacle Discovery". This paper has been accepted by IEEE International Conference on Robotics and Automation (ICRA) 2019.
@@ -27,6 +28,10 @@ title={A Novel Multi-layer Framework for Tiny Obstacle Discovery},
 year={2019},
 }
 ```
+
+## Visualization of generated bounding boxes
+![graph](./visual.png)
+
 
 ## Data Preparation
 ### Lost and Found Dataset (LAF) [4]
@@ -122,6 +127,7 @@ For visualization, you needs to add performance files into the `ros_names` list 
 cd ./TOD_ros/src/tod/scripts/
 python3 draw_result.py
 ```
+![Performance](./performance.png)
 
 ## Training
 If you want to train your own model, run the following code.

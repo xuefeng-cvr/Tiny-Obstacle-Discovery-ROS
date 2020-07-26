@@ -1,0 +1,37 @@
+<launch>
+  <arg name="exp_path" value="/data/Experiment"/>
+  <arg name="exp_name" value="2020_07_15"/>
+
+  <node pkg="tod" type="DataLoad.py" name="data_loader" output="screen">
+    <param name="exp_path" value="$(arg exp_path)"  type="str"/>
+    <param name="exp_name" value="$(arg exp_name)"  type="str"/>
+    <param name="MODEL_PATH" value="$(find tod)/scripts/Model"  type="str"/>
+    <param name="save_fv" value="1"  type="bool"/>
+    <param name="is_train" value="0"  type="bool"/>
+  </node>
+  <node pkg="tod" type="DiscoverObs.py" name="obs_detector" output="screen">
+    <param name="exp_path" value="$(arg exp_path)"  type="str"/>
+    <param name="exp_name" value="$(arg exp_name)"  type="str"/>
+    <param name="MODEL_PATH" value="$(find tod)/scripts/Model"  type="str"/>
+    <param name="save_fv" value="1"  type="bool"/>
+    <param name="is_train" value="0"  type="bool"/>
+    <param name="save_bbox" value="1"  type="bool"/>
+    <param name="save_edge" value="1"  type="bool"/>
+  </node>
+  <node pkg="tod" type="DataSave.py" name="data_saver" output="screen">
+    <param name="exp_path" value="$(arg exp_path)"  type="str"/>
+    <param name="exp_name" value="$(arg exp_name)"  type="str"/>
+    <param name="MODEL_PATH" value="$(find tod)/scripts/Model"  type="str"/>
+    <param name="save_fv" value="1"  type="bool"/>
+    <param name="is_train" value="0"  type="bool"/>
+  </node>
+  <node pkg="tod" type="Evaluate.py" name="evaluator" output="screen">
+    <param name="exp_path" value="$(arg exp_path)"  type="str"/>
+    <param name="exp_name" value="$(arg exp_name)"  type="str"/>
+    <param name="MODEL_PATH" value="$(find tod)/scripts/Model"  type="str"/>
+    <param name="save_fv" value="1"  type="bool"/>
+    <param name="is_train" value="0"  type="bool"/>
+    <param name="save_path" value="$(find tod)/scripts/result"  type="str"/>
+  </node>
+
+</launch>

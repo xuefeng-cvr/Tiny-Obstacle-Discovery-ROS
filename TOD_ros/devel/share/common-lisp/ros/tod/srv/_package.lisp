@@ -1,0 +1,15 @@
+(cl:defpackage tod-srv
+  (:use )
+  (:export
+   "REQIMAGE"
+   "<REQIMAGE-REQUEST>"
+   "REQIMAGE-REQUEST"
+   "<REQIMAGE-RESPONSE>"
+   "REQIMAGE-RESPONSE"
+   "STARTEVAL"
+   "<STARTEVAL-REQUEST>"
+   "STARTEVAL-REQUEST"
+   "<STARTEVAL-RESPONSE>"
+   "STARTEVAL-RESPONSE"
+  ))
+

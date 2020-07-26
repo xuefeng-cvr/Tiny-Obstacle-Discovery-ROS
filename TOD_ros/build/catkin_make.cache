@@ -1,0 +1,2 @@
+tod
+-DCATKIN_DEVEL_PREFIX=/home/robotxf/TOD_python/TOD_ros/devel -DCMAKE_INSTALL_PREFIX=/home/robotxf/TOD_python/TOD_ros/install -G Unix Makefiles
